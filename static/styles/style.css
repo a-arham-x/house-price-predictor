@@ -1,0 +1,67 @@
+/* body{
+    background-color: gold;
+} */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: "Roborto", sans-serif;
+    font-size: 30px;
+    color: #17B169;
+    padding: 30px;
+}
+
+p{
+    font-family: "Roborto", sans-serif;
+    font-size: 20px;
+    color: #17B169;
+}
+
+form{
+    border: 1px solid #17B169;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="Submit"]{
+    height: 40px;
+    width: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #17B169;
+    cursor: pointer;
+}
+
+input[type="Submit"]:hover{
+    background-color: #018749;
+}
+
+.row-div{
+    display: flex;
+    padding: 10px;
+}
+
+.label-input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+label{
+    font-family: "Roborto", sans-serif;
+}
+
+select{
+    width: 150px;
+    background-color: white;
+    font-family: "Roborto", sans-serif;
+}

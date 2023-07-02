@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Predictor</h1>
+        {% if predicted_price > 0: %}
+        <p>Predicted Price: {{ predicted_price }}</p>
+        {% endif %}
+        <form action="/predict" method="post">
+            {{ form.csrf_token }}
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.area.label() }}
+                    {{ form.area() }}
+                </div>
+                <div class="label-input">
+                    {{ form.bedrooms.label() }}
+                    {{ form.bedrooms() }}
+                </div>
+            </div>
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.bathrooms.label() }}
+                    {{ form.bathrooms() }}
+                </div>
+                <div class="label-input">
+                    {{ form.stories.label() }}
+                    {{ form.stories() }}
+                </div>
+            </div>
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.mainroad.label() }}
+                    {{ form.mainroad() }}
+                </div>
+                <div class="label-input">
+                    {{ form.guestroom.label() }}
+                    {{ form.guestroom() }}
+                </div>
+            </div>
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.basement.label() }}
+                    {{ form.basement() }}
+                </div>
+                <div class="label-input">
+                    {{ form.hotwaterheating.label() }}
+                    {{ form.hotwaterheating() }}
+                </div>
+            </div>
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.airconditioning.label() }}
+                    {{ form.airconditioning() }}
+                </div>
+                <div class="label-input">
+                    {{ form.parking.label() }}
+                    {{ form.parking() }}
+                </div>
+            </div>
+            <div class="row-div">
+                <div class="label-input">
+                    {{ form.prefarea.label() }}
+                    {{ form.prefarea() }}
+                </div>
+                <div class="label-input">
+                    {{ form.furnishingstatus.label() }}
+                    {{ form.furnishingstatus() }}
+                </div>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+</body>
+</html>
